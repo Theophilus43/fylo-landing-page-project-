@@ -3,12 +3,13 @@
     --Desaturated-Blue: hsl(238, 22%, 44%);
 
 
---Bright-Blue: hsl(224, 93%, 58%);
---Moderate-Cyan: hsl(170, 45%, 43%);
+    --Bright-Blue: hsl(224, 93%, 58%);
+    --Moderate-Cyan: hsl(170, 45%, 43%);
+    --Cyan: hsl(170, 76%, 69%);
 
 
---Light-Grayish-Blue: hsl(240, 75%, 98%);
---Light-Gray: hsl(0, 0%, 75%);
+    --Light-Grayish-Blue: hsl(240, 75%, 98%);
+    --Light-Gray: hsl(0, 0%, 75%);
 }
 
 /* font-family: 'Open Sans', sans-serif;
@@ -48,16 +49,29 @@ nav ul li {
 } 
 
 nav ul li a {
-    text-decoration: none
+    text-decoration: none;
+    color: var(--Very-Dark-Blue);
 }
 
 input{
     font-size: 10px;
     padding: 1em 12em 1em 1em;
-    border-top: 1.6px solid black;
+    border: 1px solid black;
     border-left: 2px solid gray;
     border-radius: 3px;
-    margin: 0 auto; 
+    margin: 0 auto;
+    color: var(--Light-Gray);
+}
+
+.input-sec{
+    font-size: 10px;
+    padding: 1em 12em 1em 1em;
+    border: 1px solid ;
+    border-left: 2px solid gray;
+    border-radius: 3px;
+    margin: 0 auto;
+    color: var(--Light-Gray);
+    background-color: white;
 }
 
 .email{
@@ -106,7 +120,7 @@ input{
 }
 
 .news{
-    width: 80%;
+    width: 90%;
     max-width: 300px;
 }
 
@@ -124,25 +138,40 @@ h2{
 
 h4{
     margin: 1em 2em;
+    color: var(--Very-Dark-Blue);
+    font-size: 20px;
 }
 
 .text{
     margin-bottom: 1em; 
+    color: var(--Desaturated-Blue);
+    font-weight: 500;
+    font-size: 14px;
 }
 
 
 .only{
     margin:0 auto 1.6em auto;
     width: 80%;
+    color: var(--Very-Dark-Blue);
+    font-size: 17px;
+    line-height: 1.4em;
 }
 
 .text-icon {
-    border-bottom: 1px solid black;
+    cursor: pointer;
+    border-bottom: 1px solid ;
     padding: 4px 2px;
     margin-right: 20px;
+    margin-bottom: 1.5em;
     display: inline-block;
     text-decoration: none;
+    color: var(--Moderate-Cyan);
   }
+.text-icon:is(:hover, :focus) {
+    color: var(--Cyan);
+}
+
   .text-icon svg {
     display: inline-block;
      vertical-align: middle;
@@ -150,16 +179,21 @@ h4{
 
   .isolate{
     min-width: 210px;
-    max-width: 280px;
+    max-width: 350px;
     margin: 1em auto;
     text-align: left;
     background-color: white;
     color: var(--Very-Dark-Blue);
     padding: 1em 1em 1.5em 1.5em;
-  }
+    border-radius: 8px;
+    border: 9px solid var( --Light-Grayish-Blue);
+}
 
   .isolate p {
-    margin-bottom: 1em;
+    margin: .5em 0 1em 0;
+    line-height: 1.5em;
+    word-spacing: .2em;
+    font-size: 14px;
   }
 
   .isolate img {
@@ -180,8 +214,7 @@ h4{
     font-size: 18px;
   }
 
-  .job{
-    font-weight: 600;
+  .job{ 
     font-size: 13px;
   }
 
@@ -216,17 +249,197 @@ h4{
 
 .free{
     padding: 2em 2em 1em 2em;
+    font-size: 18px;
+    color: var(--Light-Grayish-Blue);
 }
 
 .get p{
     color: var(--Light-Grayish-Blue);
-    padding: 0 2em 1em 2em;
+    padding: 0 2em 1.5em 2em;
+    line-height: 1.5em;
 }
 
+.last{
+    text-align: left;
+    padding: 2.5em 0 1em 2em;
+    background-color: var(--Very-Dark-Blue);
+    color: var(--Light-Grayish-Blue);
+}
+
+.last p{
+    margin: 1em 0;
+    font-size: 13px;
+}
+
+.p-phone{
+    padding-top: 1em;
+}
+
+.last path{
+    fill: #f8f8f8;
+}
+
+.phone-svg{
+    margin-right: 1em
+}
+
+.about-us{
+    margin: 3em 0 2em 0;
+}
 
 
 @media (min-width: 340px) {
     nav ul {
         display: flex;
     }
+}
+
+
+@media (min-width: 768px) {
+    .first-subcontainer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .news{
+        position: relative;
+        right: 1em;
+        margin: 0 0 0 1em;
+        display: inline-block;
+        max-width: 400px
+    }
+
+    .first-class{
+        text-align: left;
+        margin: 0;
+        width: 50%;
+    }
+
+    h2{
+        margin: 1em 0 1em 1em;
+        color: var(--Very-Dark-Blue);
+    }
+
+    .only{
+            margin:0 0 1.6em 1.4em;
+    }
+
+    input{
+        margin: 0 0 0 2.4em;
+    }
+
+    .email{
+        text-align: left;
+    }
+    .move{
+        display: flex;
+        width: 30%;
+    }
+
+    
+.button{
+    cursor: pointer;
+    padding: .2em 5em;
+    border: 0;
+    border-radius: 3px;
+    background-color: var(--Bright-Blue);
+    color: white;
+    margin: 0 1em 4em 1em;
+    text-decoration: none;
+    align-items: center;
+}
+
+.background {
+    margin-top: 5.5rem;
+    padding: 3rem 1.5rem;
+    position: relative;
+    background-color: #f8f8fe;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  
+  .background::before {
+    content: "";
+    background-image: url(../images/bg-curve-desktop.svg);
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    height: 4rem;
+    width: 100%;
+  }
+
+  .stay{
+    text-align: left;
+    width: 50%;
+    margin-left: 0
+  }
+
+  h4{
+    margin: 0 0 1em .5em;
+  }
+
+  .text{
+    margin: 0 0 1em .5em;
+    max-width: 400px;
+    
+  }
+
+  .text-icon{
+    margin-left: .5em;
+  }
+
+  .isolate{
+    margin: 0
+  }
+
+  .work{
+    max-width: 400px;
+  }
+
+  .get{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .big{
+    text-align: left;
+    width: 50%;
+  }
+
+  .select{
+    margin: 5em 1em 0 1em;
+    max-width: 400px; 
+  }
+
+  .input-sec{
+    background-color: white;
+  }
+
+  .button-sec{
+    padding: .7em 4em .7em 1em;
+    margin: 1em 4.5em 4em 0;
+  }
+
+  .big p{
+    max-width: 600px;
+  }
+
+  .last{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-us{
+    margin-top: 4.7em
+  }
+
+  .contact-us{
+    padding-top: 4.6em;
+    margin-right: 1em
+  }
 }
