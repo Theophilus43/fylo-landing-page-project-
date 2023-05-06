@@ -81,12 +81,13 @@ input{
 .button{
     cursor: pointer;
     padding: .7em 7em;
+    white-space: nowrap;
     border: 0;
     border-radius: 3px;
     background-color: var(--Bright-Blue);
     color: white;
     margin: 0 auto 4em auto;
-    overflow-wrap: normal;
+    overflow-wrap: hidden;
 }
 
 .button:is(:hover, :focus) {
@@ -341,7 +342,7 @@ h4{
     
 .button{
     cursor: pointer;
-    padding: .2em 5em;
+    padding: .65em 3em;
     border: 0;
     border-radius: 3px;
     background-color: var(--Bright-Blue);
